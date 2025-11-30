@@ -100,7 +100,7 @@ def print_welcome_banner():
     print(f"  Budget Control:          {DISPLAY_DEFAULTS['budget_control']['name']} (options: FULL-TRACK, NO-TRACK, FORCED)")
     print(f"  Repetition Handling:     {DISPLAY_DEFAULTS['repetition_handling']} (options: ALLOW, RESTRICT)")
     print(f"  Commands Limit:          {DISPLAY_DEFAULTS['commands_limit']} (range: 1-100)")
-    print(f"  External Fix Strategy:   {DISPLAY_DEFAULTS['external_fix_strategy']} (range: 0-5)")
+    print(f"  External Fix Strategy:   {DISPLAY_DEFAULTS['external_fix_strategy']} (range: 0-3)")
     print("===============================================\n")
 
 def parse_args(argv):
@@ -117,7 +117,7 @@ def parse_args(argv):
 
     # EXTERNAL must accept 0 — check for is not None in code
     parser.add_argument("--external", type=int,
-                        help="external_fix_strategy (integer 0-5)")
+                        help="external_fix_strategy (integer 0-3)")
 
     parser.add_argument("--show", action="store_true",
                         help="Show current and default values")
